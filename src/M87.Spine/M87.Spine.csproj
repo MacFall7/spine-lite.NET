@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>12.0</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+
+    <PackageId>M87.Spine</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>M87 Studio LLC</Authors>
+    <Company>M87 Studio LLC</Company>
+    <Description>Spine Lite ports the authority-separation pattern into Semantic Kernel's function invocation pipeline. Six effect classes, fail-closed default, cryptographic receipt chain, enforced as an IFunctionInvocationFilter before the function executes.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>semantic-kernel;governance;ai-safety;agents</PackageTags>
+    <RepositoryUrl>https://github.com/MacFall7/spine-lite.NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.75.0" />
+  </ItemGroup>
+
+</Project>
