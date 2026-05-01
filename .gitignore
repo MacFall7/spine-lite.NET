@@ -1,0 +1,87 @@
+# ---------------------------------------------------------------------------
+# .NET / C# build artifacts
+# ---------------------------------------------------------------------------
+bin/
+obj/
+out/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Build results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.lib
+*.so
+*.dylib
+*.exp
+*.ilk
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+*.trx
+TestResults/
+.coverlet/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+.idea/
+*.swp
+*.*~
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pfx
+*.snk
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Misc
+*.log
+node_modules/
+.tmp/
+.cache/
