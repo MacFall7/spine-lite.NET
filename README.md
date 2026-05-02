@@ -1,5 +1,7 @@
 # Spine Lite — .NET
 
+[![NuGet](https://img.shields.io/nuget/v/M87.Spine.svg)](https://www.nuget.org/packages/M87.Spine/) [![CI](https://github.com/MacFall7/spine-lite.NET/actions/workflows/ci.yml/badge.svg)](https://github.com/MacFall7/spine-lite.NET/actions/workflows/ci.yml)
+
 Spine Lite ports the authority-separation pattern into Semantic Kernel's function invocation pipeline. Six effect classes, fail-closed default, cryptographic receipt chain, enforced as an `IFunctionInvocationFilter` before the function executes.
 
 `v0.1.0` is single-process local enforcement. Distributed gating, Ed25519 signing, and PAR tracking belong in a future `M87.Spine.Pro` package.
