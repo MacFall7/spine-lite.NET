@@ -6,6 +6,9 @@ Spine Lite ports the authority-separation pattern into Semantic Kernel's functio
 
 `v0.1.0` is single-process local enforcement. Distributed gating, Ed25519 signing, and PAR tracking belong in a future `M87.Spine.Pro` package.
 
+> **Repository role:** .NET port of the Spine Lite governance pattern, built on Semantic Kernel. Effect taxonomy and receipt format are wire-compatible with [M87-Spine-lite](https://github.com/MacFall7/M87-Spine-lite) (the original Claude Code hook implementation), not with [spine-lite-python](https://github.com/MacFall7/spine-lite-python), which uses a separate taxonomy.
+> **Status:** Published to NuGet (`M87.Spine` 0.1.0).
+
 ## Install
 
 ```
@@ -54,7 +57,7 @@ A full runnable demo lives at `samples/BasicSemanticKernelHost/`.
 6. **Model Interchangeability.** No dependency on a specific LLM. The filter operates on Semantic Kernel function metadata.
 7. **Narrative ≠ Runtime.** SK `[Description]` attributes are advisory. Authority lives in the manifest.
 
-## Six effect classes (wire-faithful with Spine Lite Python)
+## Six effect classes (wire-faithful with M87-Spine-lite)
 
 | Wire string         | Meaning                                              |
 |---------------------|------------------------------------------------------|
@@ -79,9 +82,7 @@ A full runnable demo lives at `samples/BasicSemanticKernelHost/`.
 - Not auto-function-calling aware. v0.1.0 registers `IFunctionInvocationFilter` only; `IAutoFunctionInvocationFilter` is out of scope.
 - Not a replacement for runtime sandboxing. Spine enforces a manifest contract; it does not constrain what an executing function can reach inside the host process.
 
-## Receipt format
-
-Receipts are byte-compatible with [Spine Lite Python v0.1.0](https://github.com/MacFall7/M87-Spine-lite). Twelve top-level fields (`receipt_id`, `session_id`, `proposal_id`, `sequence_number`, `timestamp`, `executor`, `action`, `result`, `budget_snapshot`, `git_context`, `previous_receipt_hash`, `receipt_hash`); SHA-256 chain. Schema at `tests/M87.Spine.Tests/fixtures/receipt.schema.json`.
+Receipts are byte-compatible with [M87-Spine-lite v0.1.0](https://github.com/MacFall7/M87-Spine-lite). Twelve top-level fields (`receipt_id`, `session_id`, `proposal_id`, `sequence_number`, `timestamp`, `executor`, `action`, `result`, `budget_snapshot`, `git_context`, `previous_receipt_hash`, `receipt_hash`); SHA-256 chain. Schema at `tests/M87.Spine.Tests/fixtures/receipt.schema.json`.
 
 ## License
 
